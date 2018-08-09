@@ -1,0 +1,2 @@
+# LinqInternalCourse
+LINQ internal course
