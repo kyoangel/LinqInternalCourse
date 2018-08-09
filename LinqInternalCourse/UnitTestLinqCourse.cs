@@ -15,7 +15,7 @@ namespace LinqInternalCourse
         {
             var employees = RepositoryFactory.GetEmployees();
             // implement GetEmployeesAgeGreaterThan25
-            var actual = new WithoutLinq().GetEmployeesAgeGreaterThan25(employees);
+            var actual = YourOwnLinq.GetEmployeesAgeGreaterThan25(employees);
 
             var expected = new List<Employee>()
             {
@@ -35,7 +35,7 @@ namespace LinqInternalCourse
         {
             var employees = RepositoryFactory.GetEmployees();
             // implement GetEmployeesMonthSalaryBiggerThan150
-            var actual = new WithoutLinq().GetEmployeesMonthSalaryBiggerThan150(employees);
+            var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan150(employees);
 
             var expected = new List<Employee>()
             {
