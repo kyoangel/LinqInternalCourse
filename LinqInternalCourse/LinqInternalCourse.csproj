@@ -56,7 +56,6 @@
     <Compile Include="UnitTestLinqCourse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\RepositoryFactory.cs" />
-    <Compile Include="WithoutLinq.cs" />
     <Compile Include="YourOwnLinq.cs" />
   </ItemGroup>
   <ItemGroup>
