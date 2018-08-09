@@ -4,6 +4,7 @@ using LinqInternalCourse.Models;
 using LinqInternalCourse.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LinqInternalCourse
 {
@@ -15,7 +16,7 @@ namespace LinqInternalCourse
         {
             var employees = RepositoryFactory.GetEmployees();
             // implement GetEmployeesAgeGreaterThan25
-            var actual = new WithoutLinq().GetEmployeesAgeGreaterThan25(employees);
+            var actual = new WithoutLinq().GetEmployeesAgeGreaterThan25(employees).ToList();
 
             var expected = new List<Employee>()
             {
@@ -34,8 +35,8 @@ namespace LinqInternalCourse
         public void get_employee_monthSalary_greater_than_150()
         {
             var employees = RepositoryFactory.GetEmployees();
-            // implement GetEmployeesMonthSalaryBiggerThan150
-            var actual = new WithoutLinq().GetEmployeesMonthSalaryBiggerThan150(employees);
+            // implement GetEmployeesMonthSalaryGreaterThan150
+            var actual = new WithoutLinq().GetEmployeesMonthSalaryGreaterThan150(employees).ToList();
 
             var expected = new List<Employee>()
             {
