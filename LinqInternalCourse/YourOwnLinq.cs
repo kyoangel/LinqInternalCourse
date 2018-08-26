@@ -1,18 +1,20 @@
-﻿using LinqInternalCourse.Models;
+﻿using System;
+using LinqInternalCourse.Models;
 using System.Collections.Generic;
 
 namespace LinqInternalCourse
 {
     public static class YourOwnLinq
     {
-        public static IEnumerable<Employee> GetEmployeesMonthSalaryBiggerThan150(IEnumerable<Employee> employees)
+        public static IEnumerable<Employee> GetEmployeesMonthSalaryBiggerThan150(IEnumerable<Employee> employees, Func<Employee, bool> predicate)
         {
             var enumerator = employees.GetEnumerator();
             while (enumerator.MoveNext())
             {
-                if (enumerator.Current.MonthSalary > 150)
+                var employee = enumerator.Current;
+                if (predicate(employee))
                 {
-                    yield return enumerator.Current;
+                    yield return employee;
                 }
             }
         }

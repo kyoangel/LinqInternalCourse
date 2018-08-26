@@ -36,7 +36,7 @@ namespace LinqInternalCourse
         {
             var employees = RepositoryFactory.GetEmployees();
             // implement GetEmployeesMonthSalaryBiggerThan150
-            var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan150(employees).ToList();
+            var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan150(employees, employee => employee.MonthSalary > 150).ToList();
 
             var expected = new List<Employee>()
             {
