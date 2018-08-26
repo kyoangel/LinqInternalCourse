@@ -6,19 +6,20 @@ namespace LinqInternalCourse
 {
     public static class YourOwnLinq
     {
-        public static IEnumerable<Employee> GetEmployeesMonthSalaryBiggerThan150(IEnumerable<Employee> employees, Func<Employee, bool> predicate)
+        public static IEnumerable<T> KyoWhere<T>(IEnumerable<T> source, Func<T, bool> predicate)
         {
-            var enumerator = employees.GetEnumerator();
+            var enumerator = source.GetEnumerator();
             while (enumerator.MoveNext())
             {
-                var employee = enumerator.Current;
-                if (predicate(employee))
+                var current = enumerator.Current;
+                if (predicate(current))
                 {
-                    yield return employee;
+                    yield return current;
                 }
             }
         }
 
+        [Obsolete]
         public static IEnumerable<Employee> GetEmployeesAgeGreaterThan25(IEnumerable<Employee> employees)
         {
             var enumerator = employees.GetEnumerator();

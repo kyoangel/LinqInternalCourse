@@ -16,7 +16,7 @@ namespace LinqInternalCourse
         {
             var employees = RepositoryFactory.GetEmployees();
             // implement GetEmployeesAgeGreaterThan25
-            var actual = YourOwnLinq.GetEmployeesAgeGreaterThan25(employees).ToList();
+            var actual = YourOwnLinq.KyoWhere(employees, x => x.Age > 25).ToList();
 
             var expected = new List<Employee>()
             {
@@ -35,8 +35,8 @@ namespace LinqInternalCourse
         public void get_employee_monthSalary_greater_than_150()
         {
             var employees = RepositoryFactory.GetEmployees();
-            // implement GetEmployeesMonthSalaryBiggerThan150
-            var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan150(employees, employee => employee.MonthSalary > 150).ToList();
+            // implement KyoWhere
+            var actual = YourOwnLinq.KyoWhere(employees, employee => employee.MonthSalary > 150).ToList();
 
             var expected = new List<Employee>()
             {
