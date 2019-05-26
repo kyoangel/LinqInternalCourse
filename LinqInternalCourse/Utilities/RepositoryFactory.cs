@@ -10,14 +10,14 @@ namespace LinqInternalCourse.Utilities
         {
             return new List<Employee>
             {
-                new Employee {Name = "Joe", Role = RoleType.Engineer, MonthSalary = 100, Age = 44, WorkingYear = 2.6},
-                new Employee {Name = "Tom", Role = RoleType.Engineer, MonthSalary = 140, Age = 33, WorkingYear = 2.6},
-                new Employee {Name = "Kevin", Role = RoleType.Manager, MonthSalary = 380, Age = 55, WorkingYear = 2.6},
-                new Employee {Name = "Andy", Role = RoleType.OP, MonthSalary = 80, Age = 22, WorkingYear = 2.6},
-                new Employee {Name = "Bas", Role = RoleType.Engineer, MonthSalary = 280, Age = 36, WorkingYear = 2.6},
-                new Employee {Name = "Mary", Role = RoleType.OP, MonthSalary = 180, Age = 26, WorkingYear = 2.6},
-                new Employee {Name = "Frank", Role = RoleType.Engineer, MonthSalary = 120, Age = 16, WorkingYear = 2.6},
-                new Employee {Name = "Joey", Role = RoleType.Engineer, MonthSalary = 250, Age = 40, WorkingYear = 2.6},
+                new Employee {Name = "Steven", Role = RoleType.Intern, MonthSalary = 100, Age = 20, WorkingYear = 0.3},
+                new Employee {Name = "Ben", Role = RoleType.Intern, MonthSalary = 110, Age = 20, WorkingYear = 0.3},
+                new Employee {Name = "Sherry", Role = RoleType.Intern, MonthSalary = 120, Age = 21, WorkingYear = 0.3},
+                new Employee {Name = "April", Role = RoleType.Intern, MonthSalary = 130, Age = 21, WorkingYear = 0.3},
+                new Employee {Name = "Guy", Role = RoleType.Intern, MonthSalary = 140, Age = 22, WorkingYear = 0.3},
+                new Employee {Name = "Vincent", Role = RoleType.Intern, MonthSalary = 150, Age = 22, WorkingYear = 0.3},
+                new Employee {Name = "Kyo", Role = RoleType.Coach, MonthSalary = 250, Age = 33, WorkingYear = 2.1},
+                new Employee {Name = "Amanda", Role = RoleType.CoachAssistant, MonthSalary = 200, Age = 25, WorkingYear = 2.0},
             };
         }
     }

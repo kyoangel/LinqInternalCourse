@@ -7,45 +7,44 @@ using System.Collections.Generic;
 
 namespace LinqInternalCourse
 {
-    [TestClass]
-    public class UnitTestLinqCourse
-    {
-        [TestMethod]
-        public void get_employee_age_greater_than_25()
-        {
-            var employees = RepositoryFactory.GetEmployees();
-            // implement GetEmployeesAgeGreaterThan25
-            var actual = YourOwnLinq.GetEmployeesAgeGreaterThan25(employees);
+	[TestClass]
+	public class UnitTestLinqCourse
+	{
+		[TestMethod]
+		public void get_employee_age_greater_than_21()
+		{
+			var employees = RepositoryFactory.GetEmployees();
+			// implement GetEmployeesAgeGreaterThan21
+			var actual = YourOwnLinq.GetEmployeesAgeGreaterThan21(employees);
 
-            var expected = new List<Employee>()
-            {
-                new Employee {Name = "Joe", Role = RoleType.Engineer, MonthSalary = 100, Age = 44, WorkingYear = 2.6},
-                new Employee {Name = "Tom", Role = RoleType.Engineer, MonthSalary = 140, Age = 33, WorkingYear = 2.6},
-                new Employee {Name = "Kevin", Role = RoleType.Manager, MonthSalary = 380, Age = 55, WorkingYear = 2.6},
-                new Employee {Name = "Bas", Role = RoleType.Engineer, MonthSalary = 280, Age = 36, WorkingYear = 2.6},
-                new Employee {Name = "Mary", Role = RoleType.OP, MonthSalary = 180, Age = 26, WorkingYear = 2.6},
-                new Employee {Name = "Joey", Role = RoleType.Engineer, MonthSalary = 250, Age = 40, WorkingYear = 2.6},
-            };
+			var expected = new List<Employee>()
+			{
+				new Employee {Name = "Guy", Role = RoleType.Intern, MonthSalary = 140, Age = 22, WorkingYear = 0.3},
+				new Employee {Name = "Vincent", Role = RoleType.Intern, MonthSalary = 150, Age = 22, WorkingYear = 0.3},
+				new Employee {Name = "Kyo", Role = RoleType.Coach, MonthSalary = 250, Age = 33, WorkingYear = 2.1},
+				new Employee {Name = "Amanda", Role = RoleType.CoachAssistant, MonthSalary = 200, Age = 25, WorkingYear = 2.0},
+			};
 
-            expected.ToExpectedObject().ShouldEqual(actual);
-        }
+			expected.ToExpectedObject().ShouldEqual(actual);
+		}
 
-        [TestMethod]
-        public void get_employee_monthSalary_greater_than_150()
-        {
-            var employees = RepositoryFactory.GetEmployees();
-            // implement GetEmployeesMonthSalaryBiggerThan150
-            var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan150(employees);
+		[TestMethod]
+		public void get_employee_monthSalary_greater_than_120()
+		{
+			var employees = RepositoryFactory.GetEmployees();
+			// implement GetEmployeesMonthSalaryBiggerThan120
+			var actual = YourOwnLinq.GetEmployeesMonthSalaryBiggerThan120(employees);
 
-            var expected = new List<Employee>()
-            {
-                new Employee {Name = "Kevin", Role = RoleType.Manager, MonthSalary = 380, Age = 55, WorkingYear = 2.6},
-                new Employee {Name = "Bas", Role = RoleType.Engineer, MonthSalary = 280, Age = 36, WorkingYear = 2.6},
-                new Employee {Name = "Mary", Role = RoleType.OP, MonthSalary = 180, Age = 26, WorkingYear = 2.6},
-                new Employee {Name = "Joey", Role = RoleType.Engineer, MonthSalary = 250, Age = 40, WorkingYear = 2.6},
-            };
+			var expected = new List<Employee>()
+			{
+				new Employee {Name = "April", Role = RoleType.Intern, MonthSalary = 130, Age = 21, WorkingYear = 0.3},
+				new Employee {Name = "Guy", Role = RoleType.Intern, MonthSalary = 140, Age = 22, WorkingYear = 0.3},
+				new Employee {Name = "Vincent", Role = RoleType.Intern, MonthSalary = 150, Age = 22, WorkingYear = 0.3},
+				new Employee {Name = "Kyo", Role = RoleType.Coach, MonthSalary = 250, Age = 33, WorkingYear = 2.1},
+				new Employee {Name = "Amanda", Role = RoleType.CoachAssistant, MonthSalary = 200, Age = 25, WorkingYear = 2.0},
+			};
 
-            expected.ToExpectedObject().ShouldEqual(actual);
-        }
-    }
+			expected.ToExpectedObject().ShouldEqual(actual);
+		}
+	}
 }

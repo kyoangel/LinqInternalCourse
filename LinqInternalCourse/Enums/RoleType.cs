@@ -2,8 +2,8 @@
 {
     public enum RoleType
     {
-        Engineer,
-        OP,
-        Manager
+        Intern,
+        CoachAssistant,
+        Coach
     }
 }
