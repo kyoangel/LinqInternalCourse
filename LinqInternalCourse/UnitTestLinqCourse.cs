@@ -52,7 +52,7 @@ namespace LinqInternalCourse
 		public void get_product_owned_by_Prime_virus()
 		{
 			var products = RepositoryFactory.GetProducts();
-			// implement GetEmployeesMonthSalaryBiggerThan120
+			// implement GetProductOwnedByPrimeVirus
 			var actual = YourOwnLinq.GetProductOwnedByPrimeVirus(products).ToList();
 
 			var expected = new List<Product>()
