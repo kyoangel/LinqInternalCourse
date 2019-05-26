@@ -4,7 +4,7 @@ using LinqInternalCourse.Models;
 
 namespace LinqInternalCourse.Utilities
 {
-    internal class RepositoryFactory
+    internal partial class RepositoryFactory
     {
         public static IEnumerable<Employee> GetEmployees()
         {
@@ -19,6 +19,34 @@ namespace LinqInternalCourse.Utilities
                 new Employee {Name = "Kyo", Role = RoleType.Coach, MonthSalary = 250, Age = 33, WorkingYear = 2.1},
                 new Employee {Name = "Amanda", Role = RoleType.CoachAssistant, MonthSalary = 200, Age = 25, WorkingYear = 2.0},
             };
+        }
+
+        public static IEnumerable<Product> GetProducts()
+        {
+	        return new List<Product>
+	        {
+		        new Product {Id = 1, Cost = 11, Price = 110, TeamName = "PV"},
+		        new Product {Id = 2, Cost = 21, Price = 210, TeamName = "PV"},
+		        new Product {Id = 3, Cost = 31, Price = 310, TeamName = "BC"},
+		        new Product {Id = 4, Cost = 41, Price = 410, TeamName = "Odd-e"},
+		        new Product {Id = 5, Cost = 51, Price = 510, TeamName = "GC"},
+		        new Product {Id = 6, Cost = 61, Price = 610, TeamName = "DF"},
+		        new Product {Id = 7, Cost = 71, Price = 710, TeamName = "Mi"},
+		        new Product {Id = 8, Cost = 18, Price = 780, TeamName = "PV"},
+	        };
+        }
+
+        public static IEnumerable<ColorBall> GetBalls()
+        {
+	        return new List<ColorBall>
+	        {
+		        new ColorBall{Color=Color.Blue, Size="L", Prize=200},
+		        new ColorBall{Color=Color.Purple, Size="L", Prize=350},
+		        new ColorBall{Color=Color.Yellow, Size="S", Prize=300},
+		        new ColorBall{Color=Color.Purple, Size="S", Prize=500},
+		        new ColorBall{Color=Color.Purple, Size="L", Prize=450},
+		        new ColorBall{Color=Color.Yellow, Size="M", Prize=500},
+	        };
         }
     }
 }
